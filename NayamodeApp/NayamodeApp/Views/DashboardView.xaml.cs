@@ -51,6 +51,13 @@ namespace NayamodeApp.Views
 			Tile1.GestureRecognizers.Clear ();
         }
 
+        public void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null) return; // has been set to null, do not 'process' tapped event
+            var attendee = e.SelectedItem as AttendeeModel;
+            DisplayAlert("Tapped", attendee.Name + " was tapped!", "OK","Cancel");
+            ((ListView)sender).SelectedItem = null; // de-select the row
+        }
         
     }
 }
