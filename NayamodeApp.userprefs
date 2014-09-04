@@ -1,0 +1,13 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="NayamodeApp\NayamodeApp\Views\DashboardView.xaml.cs">
+    <Files>
+      <File FileName="NayamodeApp\NayamodeApp\Views\DashboardView.xaml" Line="27" Column="27" />
+      <File FileName="NayamodeApp\NayamodeApp\Views\DashboardView.xaml.cs" Line="64" Column="64" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

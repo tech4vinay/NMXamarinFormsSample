@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="NayamodeApp.Views.DashboardView" x:Name="mainPage1">
+
+  <CarouselPage.Resources>
+    <ResourceDictionary>
+      <!--Main Image Style-->
+      <OnPlatform x:TypeArguments="x:Double" x:Key="Tile1Height" WinPhone="200" iOS="160" Android="100"/>
+      <OnPlatform x:TypeArguments="x:Double" x:Key="Tile1Width" WinPhone="400" iOS="300" Android="200"/>
+      <!--Dashboard tiles style-->
+      <OnPlatform x:TypeArguments="x:Double" x:Key="TileHeight" WinPhone="193" iOS="142" Android="200"/>
+      <OnPlatform x:TypeArguments="x:Double" x:Key="TileWidth" WinPhone="193" iOS="142" Android="200"/>
+      <!--stack layout spacing-->
+      <OnPlatform x:TypeArguments="x:Double" x:Key="LayoutSpacing" WinPhone="10" iOS="10" Android="10"/>
+
+      <!--Listview size-->
+      <OnPlatform x:Key="imageSize" x:TypeArguments="x:Double" iOS="50" Android="50" WinPhone="75" />
+      <OnPlatform x:Key="rowHeight" x:TypeArguments="x:Int32" iOS="60" Android="60" WinPhone="85" />
+
+    </ResourceDictionary>
+  </CarouselPage.Resources>
+
+
+  <CarouselPage.Children>
+    <ContentPage x:Name="Page1" Title="Page One">
+      <ContentPage.Content>
+        <ScrollView>
+          <StackLayout Orientation="Vertical" Spacing="{StaticResource LayoutSpacing}" Padding="10">
+            <StackLayout Orientation="Horizontal" Spacing="{StaticResource LayoutSpacing}">
+              <StackLayout WidthRequest="{StaticResource Tile1Width}" HeightRequest="{StaticResource Tile1Height}" HorizontalOptions="Start" VerticalOptions="Start" BackgroundColor="Transparent">
+                <Image WidthRequest="{StaticResource Tile1Width}" HeightRequest="{StaticResource Tile1Height}" HorizontalOptions="Start" VerticalOptions="Start" Source="MSP_Option2_03.png"></Image>
+              </StackLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="{StaticResource LayoutSpacing}">
+              <AbsoluteLayout x:Name="Tile1" WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start">
+                <Image WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" Source="Tile1.png"></Image>
+                <Label Text="Call Utha" AbsoluteLayout.LayoutBounds="0.65, 1, 0.5, 0.25" AbsoluteLayout.LayoutFlags="All"></Label>
+              </AbsoluteLayout>
+              <AbsoluteLayout WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" >
+                <Image WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" Source="Tile2.png"></Image>
+                <Label Text="Diwali" AbsoluteLayout.LayoutBounds="0.65, 1, 0.5, 0.25" AbsoluteLayout.LayoutFlags="All"></Label>
+              </AbsoluteLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="{StaticResource LayoutSpacing}">
+              <AbsoluteLayout WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" >
+                <Image WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" Source="Tile3.png"></Image>
+                <Label Text="Teacher Ji" TextColor="Black" AbsoluteLayout.LayoutBounds="0.65, 1, 0.5, 0.25" AbsoluteLayout.LayoutFlags="All"></Label>
+              </AbsoluteLayout>
+              <AbsoluteLayout WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" >
+                <Image WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" Source="Tile4.png"></Image>
+                <Label Text="Dharam" AbsoluteLayout.LayoutBounds="0.65, 1, 0.5, 0.25" AbsoluteLayout.LayoutFlags="All"></Label>
+              </AbsoluteLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="{StaticResource LayoutSpacing}">
+              <AbsoluteLayout WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start">
+                <Image WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" Source="Tile5.png"></Image>
+                <Label Text="Sushma" AbsoluteLayout.LayoutBounds="0.65, 1, 0.5, 0.25" AbsoluteLayout.LayoutFlags="All"></Label>
+              </AbsoluteLayout>
+              <AbsoluteLayout WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" >
+                <Image WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" Source="Tile6.png"></Image>
+                <Label Text="Sai n Baba" TextColor="Black" AbsoluteLayout.LayoutBounds="0.65, 1, 0.5, 0.25" AbsoluteLayout.LayoutFlags="All"></Label>
+              </AbsoluteLayout>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Spacing="{StaticResource LayoutSpacing}">
+              <AbsoluteLayout WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" >
+                <Image WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" Source="Tile7.png"></Image>
+                <Label Text="Item" AbsoluteLayout.LayoutBounds="0.65, 1, 0.5, 0.25" AbsoluteLayout.LayoutFlags="All"></Label>
+              </AbsoluteLayout>
+              <AbsoluteLayout WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" >
+                <Image WidthRequest="{StaticResource TileWidth}" HeightRequest="{StaticResource TileHeight}" HorizontalOptions="Start" VerticalOptions="Start" Source="Tile8.png"></Image>
+                <Label Text="Debit Card" AbsoluteLayout.LayoutBounds="0.65, 1, 0.5, 0.25" AbsoluteLayout.LayoutFlags="All"></Label>
+              </AbsoluteLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+              <BoxView Color="Transparent" WidthRequest="75" HeightRequest="75" HorizontalOptions="Start" VerticalOptions="Start"></BoxView>
+            </StackLayout>
+
+          </StackLayout>
+        </ScrollView>
+      </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Page Two" x:Name="Page2">
+
+      <StackLayout Orientation="Vertical" Spacing="{StaticResource LayoutSpacing}" Padding="10">
+        <ListView
+        RowHeight="{StaticResource rowHeight}" x:Name="lstAttendee" ItemsSource="{Binding Data}">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <ViewCell.View>
+                  <StackLayout Padding="5, 5, 0, 5"
+                               Orientation="Horizontal"
+                               Spacing="15">
+
+                    <Image WidthRequest="{StaticResource imageSize}"
+                             HeightRequest="{StaticResource imageSize}"
+                             Source="{Binding Photo}" />
+
+                    <StackLayout Padding="5, 0, 0, 0"
+                                 VerticalOptions="Center">
+
+                      <Label Text="{Binding Name}"
+                             Font="Bold, Medium" />
+
+                      <StackLayout Orientation="Horizontal"
+                                   Spacing="0">
+                        <Label Text="{Binding Company}" />
+                      </StackLayout>
+                    </StackLayout>
+                  </StackLayout>
+                </ViewCell.View>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+
+      </StackLayout>
+
+    </ContentPage>
+
+    <ContentPage Title="Page Three" x:Name="Page3">
+      <Label Text="Page Three"></Label>
+    </ContentPage>
+  </CarouselPage.Children>
+
+</CarouselPage>
