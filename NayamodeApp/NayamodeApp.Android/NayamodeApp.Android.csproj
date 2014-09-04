@@ -77,6 +77,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
@@ -86,6 +87,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\Drawable\MSP_Option2_03.png" />
+    <AndroidResource Include="Resources\Drawable\Tile1.png" />
+    <AndroidResource Include="Resources\Drawable\Tile2.png" />
+    <AndroidResource Include="Resources\Drawable\Tile3.png" />
+    <AndroidResource Include="Resources\Drawable\Tile4.png" />
+    <AndroidResource Include="Resources\Drawable\Tile5.png" />
+    <AndroidResource Include="Resources\Drawable\Tile6.png" />
+    <AndroidResource Include="Resources\Drawable\Tile7.png" />
+    <AndroidResource Include="Resources\Drawable\Tile8.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NayamodeApp\NayamodeApp.csproj">
