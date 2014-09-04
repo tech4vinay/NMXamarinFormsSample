@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,7 +10,7 @@ using Newtonsoft.Json;
 
 namespace NayamodeApp.ViewModels
 {
-    public class AttendeeViewModel
+    public class AttendeeViewModel : INotifyPropertyChanged
     {
         public List<AttendeeModel> Attendees { get; set; }
 
@@ -33,5 +34,7 @@ namespace NayamodeApp.ViewModels
 
             }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
