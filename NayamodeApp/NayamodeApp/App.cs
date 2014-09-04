@@ -11,7 +11,7 @@ namespace NayamodeApp
     {
         public static Page GetMainPage()
         {
-            return new DashboardView();
+            return new DashboardView(); 
         }
     }
 }
