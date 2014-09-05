@@ -15,8 +15,8 @@ namespace NayamodeApp.Views
         {
             InitializeComponent();
             AttachHandlers();
-            //lstAttendee.BindingContext = new AttendeeViewModel();
-            GetData();
+            lstAttendee.BindingContext = new AttendeeViewModel();
+            //GetData();
         }
 
         private async void GetData()

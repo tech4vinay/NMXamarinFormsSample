@@ -86,7 +86,7 @@
 
       <StackLayout Orientation="Vertical" Spacing="{StaticResource LayoutSpacing}" Padding="10">
         <ListView
-        RowHeight="{StaticResource rowHeight}" x:Name="lstAttendee" ItemsSource="{Binding Data}" ItemSelected="OnItemSelected">
+        RowHeight="{StaticResource rowHeight}" x:Name="lstAttendee" ItemsSource="{Binding Attendees}" ItemSelected="OnItemSelected">
           <ListView.ItemTemplate>
             <DataTemplate>
               <ViewCell>
