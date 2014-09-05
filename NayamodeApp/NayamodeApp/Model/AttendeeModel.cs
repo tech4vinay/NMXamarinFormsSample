@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using GalaSoft.MvvmLight;
 
 namespace NayamodeApp.Model
 {
@@ -11,7 +12,7 @@ namespace NayamodeApp.Model
         public ObservableCollection<AttendeeModel> Data { get; set; }
     }
 
-    public class AttendeeModel : INotifyPropertyChanged
+    public class AttendeeModel : ViewModelBase
     {
 
         public string _Id;
@@ -42,15 +43,12 @@ namespace NayamodeApp.Model
         public ObservableCollection<String> SessionIds { get { return _SessionIds; } set { _SessionIds = value; OnPropertyChanged(); } }
         public bool IsSpeaker { get { return _IsSpeaker; } set { _IsSpeaker = value; OnPropertyChanged(); } }
 
-        public event PropertyChangedEventHandler PropertyChanged;
 
         void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            var handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(propertyName));
-            }
+            if (propertyName != null)
+
+                RaisePropertyChanged(Convert.ToString(propertyName));
         }
     }
 
