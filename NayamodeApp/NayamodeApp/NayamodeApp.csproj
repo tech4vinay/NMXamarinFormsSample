@@ -37,6 +37,8 @@
     <Compile Include="App.cs" />
     <Compile Include="INMService.cs" />
     <Compile Include="Model\AttendeeModel.cs" />
+    <Compile Include="Model\SessionModel.cs" />
+    <Compile Include="Model\SpeakerModel.cs" />
     <Compile Include="NMEventService.cs" />
     <Compile Include="NMEventServiceRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
