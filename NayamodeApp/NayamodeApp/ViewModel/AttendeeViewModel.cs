@@ -29,7 +29,7 @@ namespace NayamodeApp.ViewModels
                 var objService = new NMEventServiceRequest();
                 var response =
                     await
-                        objService.GetUrlResponse<AttendeeRootobject>(ServiceMethod.URL,
+                        objService.GetUrlResponse<AttendeeRootobject>(ServiceMethod.Get,
                             "http://gciosummit.nayamodeevents.com/live/attendee.json", "");
                 Attendees = response.Data;
             }
