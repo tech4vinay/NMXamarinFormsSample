@@ -121,7 +121,7 @@
 
     </ContentPage>
 
-    <ContentPage Title="Page Three" x:Name="Page3">
+    <ContentPage Title="Page Three" x:Name="Page3">      
       <Label Text="Page Three"></Label>
     </ContentPage>
   </CarouselPage.Children>

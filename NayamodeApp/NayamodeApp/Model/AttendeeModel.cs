@@ -12,9 +12,9 @@ namespace NayamodeApp.Model
         public ObservableCollection<AttendeeModel> Data { get; set; }
     }
 
-    public class AttendeeModel : ViewModelBase
+    public class AttendeeModel : INotifyPropertyChanged
     {
-
+        
         public string _Id;
         public string _Name;
         public string _First;
@@ -46,10 +46,14 @@ namespace NayamodeApp.Model
 
         void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
-            if (propertyName != null)
-
-                RaisePropertyChanged(Convert.ToString(propertyName));
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 
 }
